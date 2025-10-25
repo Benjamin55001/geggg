@@ -1,0 +1,130 @@
+/* ---------- Contact section (REPLACEMENT: paste over existing contact CSS) ---------- */
+
+.contact {
+  padding: 6rem 5%;
+  color: #f6f7f8;
+  background: transparent;
+}
+
+.contact .container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Headings & intro */
+.contact h2 {
+  color: #00e5ff;
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.contact p {
+  color: #9aa6ad;
+  margin-bottom: 1rem;
+}
+
+/* Layout */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* Primary contact card */
+.contact-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* small intro */
+.contact-intro p { margin: 0 0 10px 0; color: #9aa6ad; }
+
+/* stacked contact methods */
+.contact-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+/* contact link styles */
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: #f6f7f8;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+  font-weight: 600;
+  transition: transform 0.18s ease, color 0.18s ease, background 0.18s ease;
+}
+
+/* icon sizing */
+.contact-btn svg { width: 18px; height: 18px; opacity: 0.95; }
+
+/* label */
+.contact-label { font-size: 0.95rem; color: #f6f7f8; }
+
+/* hover states (accent color) */
+.contact-btn:hover {
+  color: #00e5ff;
+  transform: translateY(-3px);
+  background: rgba(0,229,255,0.03);
+}
+
+/* CTA row */
+.contact-cta {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* primary/ghost CTA styling (use site .btn classes if present) */
+.contact-cta .btn.primary {
+  background: linear-gradient(90deg, rgba(0,229,255,0.12), rgba(0,229,255,0.04));
+  color: #00e5ff;
+  border: 1px solid rgba(0,229,255,0.14);
+  box-shadow: 0 8px 28px rgba(0,229,255,0.06);
+}
+.contact-cta .btn.ghost {
+  background: transparent;
+  color: #f6f7f8;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+
+/* Aside card */
+.contact-aside .aside-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));
+  padding: 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.55);
+  color: #9aa6ad;
+}
+
+/* full-width hire button inside aside */
+.btn.full { width: 100%; justify-content: center; }
+
+/* Responsive: stack columns and tighten spacing on smaller screens */
+@media (max-width: 980px) {
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-aside { order: 2; }
+  .contact-card { order: 1; }
+  .contact-cta { justify-content: flex-start; }
+  .contact-methods { flex-direction: column; }
+}
+
+/* Small screens: slightly reduce padding */
+@media (max-width: 640px) {
+  .contact { padding: 3.5rem 4%; }
+  .contact-card { padding: 16px; }
+  .contact-aside .aside-card { padding: 12px; }
+}
